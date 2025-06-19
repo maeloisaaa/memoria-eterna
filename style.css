@@ -1,0 +1,56 @@
+/* Custom animations for fade in effects */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+.animate-fade-in-delay {
+  animation: fadeIn 0.8s ease-out 0.3s forwards;
+  opacity: 0; /* Start hidden */
+}
+.animate-fade-in-delay-2 {
+  animation: fadeIn 0.8s ease-out 0.6s forwards;
+  opacity: 0; /* Start hidden */
+}
+
+/* Keyframes for copy link message */
+@keyframes fadeOut {
+  0% { opacity: 1; transform: translateY(0) translateX(-50%); }
+  80% { opacity: 1; transform: translateY(1) translateX(-50%); } /* Small translateY to make it move */
+  100% { opacity: 0; transform: translateY(-20px) translateX(-50%); }
+}
+
+.animate-fade-out {
+  animation: fadeOut 2.5s forwards;
+}
+
+/* Base font styles for selection in app */
+.font-inter { font-family: 'Inter', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.font-lato { font-family: 'Lato', sans-serif; }
+.font-montserrat { font-family: 'Montserrat', sans-serif; }
+.font-open-sans { font-family: 'Open Sans', sans-serif; }
+.font-dancing-script { font-family: 'Dancing Script', cursive; }
+
+/* Custom scrollbar for better aesthetics, especially in dark mode */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2d3748; /* Dark gray for track */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a5568; /* Slightly lighter gray for thumb */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #616e7f; /* Even lighter gray on hover */
+}
